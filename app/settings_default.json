@@ -1,0 +1,9 @@
+{
+    "oracle": {
+        "host_ip": "",
+        "host_port" : 0,
+        "sid" : "",
+        "username": "",
+        "password" : ""
+    }
+}
