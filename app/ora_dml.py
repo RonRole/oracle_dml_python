@@ -13,6 +13,6 @@ if __name__ == '__main__':
         replacements = json_query.replacements,
         excludes = json_query.excludes
     )
-    with open('output_sankyo_seiko.sql', 'a') as outfile:
+    with open('output.sql', 'a') as outfile:
         for dml in dml_list:
             outfile.write(dml)
