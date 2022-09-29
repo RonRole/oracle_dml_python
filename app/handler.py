@@ -1,4 +1,5 @@
 from oracle_client import OracleClient
+import dml_output
 import settings
 
 def handler(
@@ -6,7 +7,8 @@ def handler(
     table_name, 
     specify = {}, 
     replacements = {},
-    excludes = []
+    excludes = [],
+    dml_output = dml_output.Standard()
 ): 
     client = OracleClient(
         host     = settings.host_ip,
@@ -24,4 +26,4 @@ def handler(
         replacements = replacements,
         excludes = excludes
     )
-    return dml_list
+    dml_output.output(dml_list)
