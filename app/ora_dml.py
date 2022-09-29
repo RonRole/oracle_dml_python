@@ -10,9 +10,6 @@ if __name__ == '__main__':
     
     handler(
         settings = json_settings, 
-        table_name = json_query.table_name,
-        specify = json_query.specify,
-        replacements = json_query.replacements,
-        excludes = json_query.excludes,
+        query = json_query,
         dml_output = dml_output
     )
