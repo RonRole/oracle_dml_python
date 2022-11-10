@@ -4,7 +4,7 @@ import settings
 
 def handler(
     settings, 
-    query,
+    queries,
     dml_output = dml_output.Standard()
 ): 
     client = OracleClient(
@@ -14,13 +14,13 @@ def handler(
         username = settings.username,
         password = settings.password
     )
-
-    dict_records = client.get_dict_records(
-        table_name = query.table_name,
-        specify = query.specify
-    )
-    dml_list = dict_records.to_dml_list(
-        replacements = query.replacements,
-        excludes = query.excludes
-    )
-    dml_output.output(dml_list)
+    for query in queries:
+        dict_records = client.get_dict_records(
+            table_name = query.table_name,
+            specify = query.specify
+        )
+        dml_list = dict_records.to_dml_list(
+            replacements = query.replacements,
+            excludes = query.excludes
+        )
+        dml_output.output(dml_list)

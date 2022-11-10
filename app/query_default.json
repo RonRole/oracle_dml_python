@@ -1,6 +1,22 @@
 {
-    "table_name" : "",
-    "specify" : {},
-    "replacements" : {},
-    "excludes" : []
+    "queries" : [
+        {
+            "table_name" : "",
+            "specify" : {},
+            "replacements" : {},
+            "excludes" : []
+        },
+        {
+            "table_name" : "",
+            "specify" : {},
+            "replacements" : {},
+            "excludes" : []
+        },
+        {
+            "table_name" : "",
+            "specify" : {},
+            "replacements" : {},
+            "excludes" : []
+        }
+    ]
 }
